@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools{ jdk 'JDK19' }
-    environment { JAVA_HOME = 'C:\Program Files\Java\jdk-19' }
+    environment { JAVA_HOME = 'C:\\Program Files\\Java\\jdk-19' }
     stages {
        stage ('Compile Stage') {
         steps {
