@@ -1,0 +1,12 @@
+services:
+  hello-world-app:
+    image: systeodigital/hello-world-app:${IMAGE_TAG:-prod}
+    container_name: hello-world-app
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:2002:2002"
+    environment:
+      PORT: "2002"
+      # Ajoute ici DATABASE_URL, etc. (lues depuis le .env du serveur)
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
